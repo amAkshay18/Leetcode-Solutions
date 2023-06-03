@@ -20,24 +20,47 @@
 // t.length == s.length + 1
 // s and t consist of lowercase English letters.
 
+// class Solution {
+//   String findTheDifference(String s, String t) {
+//     Map<String, int> frequency = {};
+//     for (int i = 0; i < s.length; i++) {
+//       frequency[s[i]] = (frequency[s[i]] ?? 0) + 1;
+//     }
+//     for (int i = 0; i < t.length; i++) {
+//       if (frequency.containsKey(t[i])) {
+//         frequency[t[i]] = (frequency[t[i]] ?? 0) - 1 as int;
+//       } else {
+//         frequency[t[i]] = -1;
+//       }
+//     }
+//     for (String key in frequency.keys) {
+//       if (frequency[key] == -1) {
+//         return key;
+//       }
+//     }
+//     return "";
+//   }
+// }
+
 class Solution {
   String findTheDifference(String s, String t) {
-    Map<String, int> frequency = {};
-    for (int i = 0; i < s.length; i++) {
-      frequency[s[i]] = (frequency[s[i]] ?? 0) + 1;
+    int sum1 = 0;
+    int sum2 = 0;
+    int i;
+    for (i = 0; i < s.length; i++) {
+      sum1 += s.codeUnitAt(i);
+      sum2 += t.codeUnitAt(i);
     }
-    for (int i = 0; i < t.length; i++) {
-      if (frequency.containsKey(t[i])) {
-        frequency[t[i]] = (frequency[t[i]] ?? 0) - 1 as int;
-      } else {
-        frequency[t[i]] = -1;
-      }
-    }
-    for (String key in frequency.keys) {
-      if (frequency[key] == -1) {
-        return key;
-      }
-    }
-    return "";
+    sum2 += t.codeUnitAt(i);
+    return String.fromCharCode(sum2 - sum1);
   }
+}
+
+void main() {
+  Solution solution = Solution();
+  String s = "abcd";
+  String t = "abcde";
+
+  String result = solution.findTheDifference(s, t);
+  print(result);
 }
