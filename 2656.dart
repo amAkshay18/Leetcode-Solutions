@@ -1,5 +1,6 @@
 // 2656. Maximum Sum With Exactly K Elements
-// You are given a 0-indexed integer array nums and an integer k. Your task is to perform the following operation exactly k times in order to maximize your score:
+// You are given a 0-indexed integer array nums and an integer k.
+// Your task is to perform the following operation exactly k times in order to maximize your score:
 
 // Select an element m from nums.
 // Remove the selected element m from the array.
