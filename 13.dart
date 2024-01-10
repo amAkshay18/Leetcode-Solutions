@@ -16,10 +16,9 @@
 // I can be placed before V (5) and X (10) to make 4 and 9.
 // X can be placed before L (50) and C (100) to make 40 and 90.
 // C can be placed before D (500) and M (1000) to make 400 and 900.
+
 class Solution {
-  // Function to convert a Roman numeral to an integer
   int romanToInt(String s) {
-    // Map to store Roman numeral characters and their integer values
     final Map<String, int> romanNumerals = {
       'I': 1,
       'V': 5,
@@ -29,30 +28,17 @@ class Solution {
       'D': 500,
       'M': 1000
     };
-
-    // Initialize result and previous value variables
     int result = 0;
     int prevValue = 0;
-
-    // Iterate through each character in the input string
     for (int i = 0; i < s.length; i++) {
-      // Get the integer value of the current Roman numeral character
       int currentValue = romanNumerals[s[i]]!;
-
-      // Check if the current value is greater than the previous value
       if (currentValue > prevValue) {
-        // If true, subtract the previous value twice and add the current value
         result += currentValue - 2 * prevValue;
       } else {
-        // If false, simply add the current value to the result
         result += currentValue;
       }
-
-      // Update the previous value for the next iteration
       prevValue = currentValue;
     }
-
-    // Return the final result
     return result;
   }
 }

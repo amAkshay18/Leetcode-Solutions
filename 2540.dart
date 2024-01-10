@@ -15,19 +15,10 @@
 // Explanation: There are two common elements in the array 2 and 3 out of which 2 is the smallest, so 2 is returned.
 
 class Solution {
-  // Function to find the minimum common integer between two arrays
   int getCommon(List<int> nums1, List<int> nums2) {
-    // Creating sets from the input arrays to efficiently find common elements
-    Set<int> set1 = Set.from(nums1); // Convert nums1 to a set
-    Set<int> set2 = Set.from(nums2); // Convert nums2 to a set
-
-    // Finding the intersection of the two sets (common elements)
-    final intersect = set1.intersection(set2); // Get the common elements
-
-    // If there are no common elements, return -1; otherwise, return the smallest common element
-    return intersect.isEmpty
-        ? -1
-        : intersect
-            .first; // Return the smallest common element or -1 if none found
+    Set<int> set1 = Set.from(nums1);
+    Set<int> set2 = Set.from(nums2);
+    final intersect = set1.intersection(set2);
+    return intersect.isEmpty ? -1 : intersect.first;
   }
 }

@@ -16,21 +16,13 @@
 // Explanation: There is no way to reorder the elements to obtain an arithmetic progression.
 
 class Solution {
-  // Function to check if the given list forms an arithmetic progression
   bool canMakeArithmeticProgression(List<int> arr) {
-    // Sorting the input list in ascending order
     arr.sort();
-
-    // Loop through the list elements, starting from the second element
-    // up to the second-to-last element to compare differences
     for (int i = 1; i < arr.length - 1; i++) {
-      // Checking if the difference between consecutive elements
-      // doesn't match the common difference of the arithmetic progression
       if (arr[i] - arr[i - 1] != arr[i + 1] - arr[i]) {
-        return false; // If not in AP, return false
+        return false;
       }
     }
-
-    return true; // If the loop completes without issues, return true
+    return true;
   }
 }

@@ -12,19 +12,17 @@
 // Output: ["h","a","n","n","a","H"]
 
 class Solution {
-  // Function to reverse a list of strings in place
   void reverseString(List<String> s) {
-    int i = 0; // Pointer to the start of the list
-    String? temp; // Temporary variable to hold the value during swapping
-    int j = s.length - 1; // Pointer to the end of the list
+    int i = 0;
+    String? temp;
+    int j = s.length - 1;
 
-    // Swap elements from both ends moving towards the center
     while (i < j) {
-      temp = s[i]; // Store the value at index i in temp
-      s[i] = s[j]; // Replace value at index i with value at index j
-      s[j] = temp; // Replace value at index j with the value stored in temp
-      i++; // Move the start pointer forward
-      j--; // Move the end pointer backward
+      temp = s[i];
+      s[i] = s[j];
+      s[j] = temp;
+      i++;
+      j--;
     }
   }
 }

@@ -25,33 +25,18 @@
 // answer = [7,1,3,9].
 
 class Solution {
-  /// Separates digits from a list of integers.
-  ///
-  /// [nums]: List of integers to be separated into individual digits.
-  ///
-  /// Returns a list containing individual digits extracted from the input list.
   List<int> separateDigits(List<int> nums) {
-    // List to store separated numbers
     List<int> separatedNumbers = [];
-
-    // Iterate through each number in the input list
     for (int num in nums) {
-      // If the number is a single digit, add it to the separatedNumbers list
       if (num < 10) {
         separatedNumbers.add(num);
       } else {
-        // If the number has multiple digits, convert it to a string
         String numStr = num.toString();
-
-        // Iterate through each character in the string representation of the number
         for (int i = 0; i < numStr.length; i++) {
-          // Parse each character back to an integer and add it to the separatedNumbers list
           separatedNumbers.add(int.parse(numStr[i]));
         }
       }
     }
-
-    // Return the list containing separated digits
     return separatedNumbers;
   }
 }

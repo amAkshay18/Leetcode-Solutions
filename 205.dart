@@ -35,30 +35,16 @@
 // iterating through the strings once to perform character mapping and comparison.
 
 class Solution {
-  // This function checks if two strings s and t are isomorphic.
-  // Two strings are considered isomorphic if the characters in s can be replaced to get t.
-  // Parameters:
-  // - s: input string s
-  // - t: input string t
-  // Returns true if s and t are isomorphic, false otherwise.
   bool isIsomorphic(String s, String t) {
-    // If the lengths of strings s and t are different, they can't be isomorphic.
     if (s.length != t.length) {
       return false;
     }
-
-    // Maps to store character-to-index mappings for strings s and t.
     Map<String, int> mapS = {};
     Map<String, int> mapT = {};
-
-    // Mapping each character in s and t to their indices in the strings.
     for (int i = 0; s.length > i; i++) {
-      // Adding entries to mapS and mapT for characters in s and t respectively.
       mapS.addEntries({s[i]: i}.entries);
       mapT.addEntries({t[i]: i}.entries);
     }
-
-    // Checking if the sequence of indices in both maps is the same, indicating isomorphism.
     return mapS.values.join() == mapT.values.join();
   }
 }
