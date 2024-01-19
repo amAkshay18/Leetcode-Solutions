@@ -11,10 +11,6 @@
 // Explanation: We can reorder the elements as [1,3,5] or [5,3,1] with differences 2 and -2 respectively, between each consecutive elements.
 // Example 2:
 
-// Input: arr = [1,2,4]
-// Output: false
-// Explanation: There is no way to reorder the elements to obtain an arithmetic progression.
-
 class Solution {
   bool canMakeArithmeticProgression(List<int> arr) {
     arr.sort();
