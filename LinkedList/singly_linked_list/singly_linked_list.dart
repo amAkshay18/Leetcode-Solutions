@@ -36,15 +36,18 @@ class SinglyLinkedList {
 
   reverse() {
     Node? current = head, prev = null, next = null;
+
     if (head == null) {
       return 'linkedlist is empty';
     }
+
     while (current != null) {
       next = current.next;
       current.next = prev;
       prev = current;
       current = next;
     }
+
     head = prev;
   }
 
@@ -92,7 +95,7 @@ class SinglyLinkedList {
     Node? current = head;
     if (head == null) return 'Linkedlist is empty';
     while (current != null) {
-      // stdout.write("${current.data} -> ");
+      stdout.write("${current.data} -> ");
       current = current.next;
     }
     stdout.write("NULL");
@@ -107,7 +110,7 @@ void main() {
   _singlyLinkedList.insertNode(4);
   _singlyLinkedList.insertNode(5);
   _singlyLinkedList.insertAfter(15, 5);
-  final output = _singlyLinkedList.deleteNode(2);
+  final output = _singlyLinkedList.deleteNode(6);
   print(output);
   _singlyLinkedList.reverse();
   _singlyLinkedList.display();
