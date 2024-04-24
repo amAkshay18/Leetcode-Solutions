@@ -17,9 +17,9 @@ List<List<int>> combinationSum(List<int> candidates, int target) {
 }
 
 void main() {
-  // List<int> example1 = [2, 3, 6, 7];
-  // var result1 = combinationSum(example1, 7);
-  // print(result1);
+  List<int> example1 = [2, 3, 6, 7];
+  var result1 = combinationSum(example1, 7);
+  print(result1);
 
   List<int> example2 = [2, 3, 5];
   var result2 = combinationSum(example2, 8);
