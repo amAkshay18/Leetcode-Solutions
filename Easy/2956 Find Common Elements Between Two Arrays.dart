@@ -1,5 +1,4 @@
 List<int> findIntersectionValues(List<int> nums1, List<int> nums2) {
-  List<int> result = [];
   int count1 = 0;
   int count2 = 0;
   for (int i = 0; i < nums1.length; i++) {
