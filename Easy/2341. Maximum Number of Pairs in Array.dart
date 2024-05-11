@@ -1,5 +1,4 @@
 List<int> numberOfPairs(List<int> nums) {
-  List<int> result = [];
   int count = 0;
   int i = 0;
   while (i < nums.length - 1) {
