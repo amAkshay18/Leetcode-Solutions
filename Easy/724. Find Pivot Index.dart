@@ -10,3 +10,9 @@ int pivotIndex(List<int> nums) {
   }
   return -1;
 }
+
+void main() {
+  List<int> numbers = [1, 7, 3, 6, 5, 6];
+  int result = pivotIndex(numbers);
+  print(result);
+}
