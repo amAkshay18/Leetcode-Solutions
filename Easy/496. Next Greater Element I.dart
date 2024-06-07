@@ -2,6 +2,7 @@ List<int> nextGreaterElement(List<int> nums1, List<int> nums2) {
   List<int> result = [];
   for (int x in nums1) {
     int nextGreater = -1;
+    // ignore: unused_local_variable
     bool found = false;
     for (int y in nums2.sublist(nums2.indexOf(x))) {
       if (y > x) {
