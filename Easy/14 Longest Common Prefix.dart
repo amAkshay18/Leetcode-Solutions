@@ -4,7 +4,6 @@ class Solution {
       return "";
     }
     List<String> arr = [];
-
     for (int i = 0; i < strs[0].length; i++) {
       int flag = 0;
       for (int j = 1; j < strs.length; j++) {
