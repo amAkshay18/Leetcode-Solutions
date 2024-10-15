@@ -12,7 +12,7 @@ List<int> twoSum(List<int> nums, int target) {
 
 // Solution 2
 List<int> twoSum2(List<int> nums, int target) {
-  Map<int, int> numMap = {};
+  Map<int, int> numMap = {};    
   for (int i = 0; i < nums.length; i++) {
     int complement = target - nums[i];
     if (numMap.containsKey(complement)) {
