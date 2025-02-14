@@ -1,4 +1,4 @@
-// import 'package:collection/collection.dart';
+import 'package:collection/collection.dart';
 
 class Solution {
   int minOperations(List<int> nums, int k) {
