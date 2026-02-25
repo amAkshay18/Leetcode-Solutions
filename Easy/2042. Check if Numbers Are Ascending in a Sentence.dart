@@ -25,3 +25,15 @@ class Solution {
     return '0123456789'.contains(ch);
   }
 }
+
+class Solution2 {
+  bool areNumbersAscending(String s) {
+    List<int> numbers = RegExp(
+      r'\d+',
+    ).allMatches(s).map((match) => int.parse(match.group(0)!)).toList();
+    for (int i = 1; i < numbers.length; i++) {
+      if (numbers[i] <= numbers[i - 1]) return false;
+    }
+    return true;
+  }
+}
