@@ -13,7 +13,7 @@ class Solution {
     };
     List<List<String>> all = [];
     for (int i = 0; i < digits.length; i++) {
-      String? val = mobile[digits[i]];›
+      String? val = mobile[digits[i]];
       if (val != null) {
         all.add(val.split(','));
       }
