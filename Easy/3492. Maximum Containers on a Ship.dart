@@ -4,4 +4,4 @@ class Solution {
     int maxByWeight = maxWeight ~/ w;
     return maxByWeight < totalCells ? maxByWeight : totalCells;
   }
-}
+} 
