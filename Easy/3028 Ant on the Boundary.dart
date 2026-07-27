@@ -7,3 +7,4 @@ int returnToBoundaryCount(List<int> nums) {
   }
   return count;
 }
+// from bottom to this filtered the list to send
