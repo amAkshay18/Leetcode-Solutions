@@ -10,3 +10,20 @@ class Solution {
     return false;
   }
 }
+
+//solution 2
+class Solution2 {
+  bool containsNearbyDuplicate(List<int> nums, int k) {
+    Map<int, int> mp = {}; 
+    int n = nums.length;
+    for (int i = 0; i < n; i++) {
+      if (mp.containsKey(nums[i])) {
+        if ((i - mp[nums[i]]!).abs() <= k) {
+          return true;
+        }
+      }
+      mp[nums[i]] = i;
+    }
+    return false;
+  }
+}
