@@ -12,3 +12,20 @@ class Solution {
     return mapS.values.join() == mapT.values.join();
   }
 }
+
+// Solution 2
+class Solution2 {
+  bool isIsomorphic(String s, String t) {
+    if (s.length != t.length) return false;
+    Map<String, int> mapS = {};
+    Map<String, int> mapT = {};
+    for (int i = 0; i < s.length; i++) {
+      if (mapS[s[i]] != mapT[t[i]]) {
+        return false;
+      }
+      mapS[s[i]] = i;
+      mapT[t[i]] = i;
+    }
+    return true;
+  }
+}
