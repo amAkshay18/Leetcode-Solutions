@@ -43,3 +43,25 @@ int maxArea(List<int> height) {
 
 //     return mostWaterStored;
 // }
+
+class Solution {
+  int maxArea(List<int> height) {
+    int area = 0;
+    int i = 0;
+    int j = height.length - 1;
+    while (i < j) {
+      if (height[i] < height[j]) {
+        if (((j - i) * height[i]) > area) {
+          area = (j - i) * height[i];
+        }
+        i++;
+      } else {
+        if (((j - i) * height[j]) > area) {
+          area = (j - i) * height[j];
+        }
+        j--;
+      }
+    }
+    return area;
+  }
+}
