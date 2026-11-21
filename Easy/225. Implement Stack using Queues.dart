@@ -1,21 +1,19 @@
 class MyStack {
-  List<int>stack = [];
-  MyStack() {
-    
-  }
-  
+  List<int> stack = [];
+  MyStack() {}
+
   void push(int x) {
     stack.add(x);
   }
-  
+
   int pop() {
     return stack.removeLast();
   }
-  
+
   int top() {
     return stack.last;
   }
-  
+
   bool empty() {
     return stack.isEmpty;
   }
