@@ -15,3 +15,22 @@ class Solution {
     return result;
   }
 }
+
+// Solution 2
+class Solution2 {
+  String makeGood(String s) {
+    if (s.isEmpty) return '';
+    List<int> result = [];
+    for (int i = 0; i < s.length; i++) {
+      int current = s.codeUnitAt(i);
+      if (result.isNotEmpty &&
+          (current - result.last == 32 || result.last - current == 32)) {
+        result.removeLast();
+      } else {
+        result.add(current);
+      }
+    }
+
+    return String.fromCharCodes(result);
+  }
+}
